@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+=======
+// stylelint-disable property-blacklist
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+
+<<<<<<< HEAD
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+=======
+  @if $enable-prefers-reduced-motion-media-query {
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+  }
+}

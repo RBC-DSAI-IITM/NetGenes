@@ -1,0 +1,11 @@
+// stylelint-disable declaration-no-important
+
+// Visibility
+
+@mixin invisible($visibility) {
+  visibility: $visibility !important;
+<<<<<<< HEAD
+=======
+  @include deprecate("`invisible()`", "v4.3.0", "v5");
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EssGeneFromNet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script src="js/jquery-csv-master/src/jquery.csv.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.PNG">    
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+<body onload="parent.scrollTo(0,0);">
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">EssGeneFromNet</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+		  <li class="nav-item active"><a href="downloads.html" class="nav-link">Downloads</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  
+  
+  <div class="block-31" style="position: relative;">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('images/bg_prime.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center">
+              <h2 class="heading">Downloads</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+	<div class="site-section">
+	<div class="container">
+	  <div class="row align-items-center mb-1">
+		<div class="col-md-3 pr-md-2 mb-5 mt-1 order-md-1 offset-sm-0">
+		<h2><center>Complete genes list<br><center></h2>
+		  <div class="block-38 text-center">
+			<div class="block-38-img">
+			  <div class="block-38-header">
+				<a href="downloads/EssGeneFromNet.zip" target="_blank">
+				<img src="images/zip_file.png" alt="ZIP FILE">
+				</a>
+				<p class="block-38-subheading">Size - 45.1 MB</p>
+			  </div>
+			  <div class="block-38-body">
+				<p>Zip file containing 2711 CSV documents - one for each organism - with essential gene ID and functional annotations.</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-3 pr-md-2 mb-5 order-md-1 offset-sm-1">
+		<h2><center>Species list<br><center></h2>
+		  <div class="block-38 text-center">
+			<div class="block-38-img">
+			  <div class="block-38-header">
+			    <a href="downloads/species_list.csv" target="_blank">
+				<img src="images/csv_file.png" alt="CSV FILE">
+				</a>
+				<p class="block-38-subheading">Size - 100 KB</p>
+			  </div>
+			  <div class="block-38-body">
+				<p>CSV file containing list of organisms featured in our database, along with taxonomy ID and number of predicted genes for each organism.</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="col-md-3 pr-md-2 mb-5 order-md-1 offset-sm-1">
+		<h2><center>Training dataset<br><center></h2>
+		  <div class="block-38 text-center">
+			<div class="block-38-img">
+			  <div class="block-38-header">
+			    <a href="downloads/training_data.zip" target="_blank">
+				<img src="images/zip_file.png" alt="ZIP FILE">
+				</a>
+				<p class="block-38-subheading">Size - 49.5 MB</p>
+			  </div>
+			  <div class="block-38-body">
+				<p>ZIP file containing positive and negative training data used for the machine learning model. (README included)</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row align-items-center mb-3">
+		<div class="col-md-12">
+			<center><h4>You can download feature matrices for all 2711 organisms as a zip file from our  </h4><a href="http://www.mediafire.com/file/cxogb1cfyod262a/file" class="btn btn-primary px-3 py-1" target="_blank">Mediafire repository (1.9 GB)</a></center>
+		</div>
+	  </div>
+	</div>
+	</div>
+	
+	<div class="site-section-min">
+			   <div class="row mb-1 justify-content-center">
+				<div class="col-md-8 text-center">
+					<h2>Search and Download specific organisms</h2>
+						<!-- <p class="lead">Start typing to get suggestions</p> -->
+				</div>
+			  </div>
+				<p align="center"><input id="myTextbox1" type="text" name="obj" placeholder="Type and hit Enter.." font-weight="bold" font-size="13px" background-color="lightgray" height="35px" width="503px"><br><br></p>
+			</div>
+			<table width="80%" align="center" id="our-table">
+				<thead>
+					<tr>
+						<th width="45%"><center>Organism Name</center></th>
+						<th><center>Download list of essential genes (CSV)</center></th>
+						<th><center>Feature matrix (CSV)</center></th>
+						<th><center># of essential genes</center></th>
+					</tr>
+				</thead>
+				<tbody id="table-body">
+
+				</tbody>
+			</table>
+		
+		
+		<div class="row mb-3 justify-content-center">
+			<br>
+		</div>
+		<div class="row mb-3 justify-content-center">
+			<div id="pagination-wrapper"></div>
+	</div>
+	
+  
+ 	<footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="lead">We are an interdisciplinary group dedicated to pioneering innovative approaches and algorithms that integrate multi-dimensional data across scales, to understand, predict and manipulate complex biological systems.</p>
+          <!-- <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
+        </div>
+        <div class="col-md-6 col-lg-4">
+		  <div class="row mt-4">
+			<div class="col-md-12 mb-2 text-center mt-3">
+				<h1 class="heading-section">Organisations</h1>
+				</div>
+				<div class="col-md-6 col-lg-6">
+				  <div class="block-38 text-center">
+					<div class="block-38-img">
+					  <div class="block-38-header">
+						<a href="https://ibse.iitm.ac.in/" target="_blank">
+						<img src="images/ibse.png" alt="Image placeholder">
+						</a>
+						<!-- <h2 class="block-38-heading">IBSE</h2> -->
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-6 col-lg-6">
+				  <div class="block-38 text-center">
+					<div class="block-38-img">
+					  <div class="block-38-header">
+						<a href="https://rbcdsai.iitm.ac.in/" target="_blank">
+						<img src="images/rbcdsai.png" alt="Image placeholder">
+						</a>
+						<!-- <h1 class="block-38-heading">RBCDSAI</h1> -->
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="block-23">
+            <h3 class="heading-section">Get Connected</h3>
+              <ul>
+                <li><span class="icon icon-location-arrow"></span><p style="text-align:left">5th Floor, Block-II, Bhupat and Jyoti Mehta School of Biosciences,
+																						Indian Institute of Technology Madras,
+																						Chennai - 600 036, INDIA</p></li>
+                <li><span class="icon icon-envelope"></span><span class="text">kraman@iitm.ac.in <br>ravi@cse.iitm.ac.in</span></li>
+				<li><span class="icon icon-globe"></span><p style="text-align:left"><a href="https://home.iitm.ac.in/kraman/lab/" target="_blank">https://home.iitm.ac.in/kraman/lab/</a>
+																	<br><a href="https://www.cse.iitm.ac.in/~ravi/" target="_blank">https://www.cse.iitm.ac.in/~ravi/</a>
+																	</p></li>
+              </ul>
+            </div>
+        </div>
+        
+        
+      </div>
+      <div class="row pt-5">
+        <div class="col-md-12 text-center">
+          
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+
+  <script src="js/jquery.fancybox.min.js"></script>
+  
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/myscriptsDownloads.js"></script>
+    
+  </body>
+</html>

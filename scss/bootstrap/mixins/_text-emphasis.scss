@@ -1,0 +1,22 @@
+// stylelint-disable declaration-no-important
+
+// Typography
+
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+<<<<<<< HEAD
+  a#{$parent} {
+    @include hover-focus {
+      color: darken($color, 10%) !important;
+=======
+  @if $emphasized-link-hover-darken-percentage != 0 {
+    a#{$parent} {
+      @include hover-focus {
+        color: darken($color, $emphasized-link-hover-darken-percentage) !important;
+      }
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+    }
+  }
+}

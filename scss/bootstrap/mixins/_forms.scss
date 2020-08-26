@@ -1,0 +1,238 @@
+// Form control focus state
+//
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `$input-focus-border-color` variable.
+//
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+//
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+@mixin form-control-focus() {
+  &:focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+}
+
+
+<<<<<<< HEAD
+@mixin form-validation-state($state, $color) {
+=======
+@mixin form-validation-state($state, $color, $icon) {
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+  .#{$state}-feedback {
+    display: none;
+    width: 100%;
+    margin-top: $form-feedback-margin-top;
+<<<<<<< HEAD
+    font-size: $form-feedback-font-size;
+=======
+    @include font-size($form-feedback-font-size);
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+    color: $color;
+  }
+
+  .#{$state}-tooltip {
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    display: none;
+    max-width: 100%; // Contain to parent when possible
+<<<<<<< HEAD
+    padding: .5rem;
+    margin-top: .1rem;
+    font-size: .875rem;
+    line-height: 1;
+    color: $white;
+    background-color: rgba($color, .8);
+    border-radius: .2rem;
+  }
+
+  .form-control,
+=======
+    padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
+    margin-top: .1rem;
+    @include font-size($form-feedback-tooltip-font-size);
+    line-height: $form-feedback-tooltip-line-height;
+    color: color-yiq($color);
+    background-color: rgba($color, $form-feedback-tooltip-opacity);
+    @include border-radius($form-feedback-tooltip-border-radius);
+  }
+
+  .form-control {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      border-color: $color;
+
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-image: $icon;
+        background-repeat: no-repeat;
+        background-position: center right $input-height-inner-quarter;
+        background-size: $input-height-inner-half $input-height-inner-half;
+      }
+
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  textarea.form-control {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+      }
+    }
+  }
+
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+  .custom-select {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      border-color: $color;
+
+<<<<<<< HEAD
+=======
+      @if $enable-validation-icons {
+        padding-right: $custom-select-feedback-icon-padding-right;
+        background: $custom-select-background, $icon $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+      }
+
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+
+<<<<<<< HEAD
+=======
+
+  .form-control-file {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+  .form-check-input {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      ~ .form-check-label {
+        color: $color;
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  .custom-control-input {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      ~ .custom-control-label {
+        color: $color;
+
+        &::before {
+<<<<<<< HEAD
+          background-color: lighten($color, 25%);
+=======
+          border-color: $color;
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+        }
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+
+      &:checked {
+        ~ .custom-control-label::before {
+<<<<<<< HEAD
+=======
+          border-color: lighten($color, 10%);
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+          @include gradient-bg(lighten($color, 10%));
+        }
+      }
+
+      &:focus {
+        ~ .custom-control-label::before {
+<<<<<<< HEAD
+          box-shadow: 0 0 0 1px $body-bg, 0 0 0 $input-focus-width rgba($color, .25);
+=======
+          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+
+        &:not(:checked) ~ .custom-control-label::before {
+          border-color: $color;
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+        }
+      }
+    }
+  }
+
+  // custom file
+  .custom-file-input {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      ~ .custom-file-label {
+        border-color: $color;
+<<<<<<< HEAD
+
+        &::before { border-color: inherit; }
+=======
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+
+      &:focus {
+        ~ .custom-file-label {
+<<<<<<< HEAD
+=======
+          border-color: $color;
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+      }
+    }
+  }
+}

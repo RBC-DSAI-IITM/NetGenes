@@ -1,0 +1,23 @@
+// stylelint-disable declaration-no-important
+
+@mixin float-left {
+  float: left !important;
+<<<<<<< HEAD
+}
+@mixin float-right {
+  float: right !important;
+}
+@mixin float-none {
+  float: none !important;
+=======
+  @include deprecate("The `float-left` mixin", "v4.3.0", "v5");
+}
+@mixin float-right {
+  float: right !important;
+  @include deprecate("The `float-right` mixin", "v4.3.0", "v5");
+}
+@mixin float-none {
+  float: none !important;
+  @include deprecate("The `float-none` mixin", "v4.3.0", "v5");
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+}

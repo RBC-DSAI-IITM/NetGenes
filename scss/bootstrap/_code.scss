@@ -1,0 +1,78 @@
+<<<<<<< HEAD
+// Inline and block code styles
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-family-monospace;
+}
+
+// Inline code
+code {
+  font-size: $code-font-size;
+=======
+// Inline code
+code {
+  @include font-size($code-font-size);
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+  color: $code-color;
+  word-break: break-word;
+
+  // Streamline the style when inside anchors to avoid broken underline and more
+  a > & {
+    color: inherit;
+  }
+}
+
+// User input typically entered via keyboard
+kbd {
+  padding: $kbd-padding-y $kbd-padding-x;
+<<<<<<< HEAD
+  font-size: $kbd-font-size;
+=======
+  @include font-size($kbd-font-size);
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+  color: $kbd-color;
+  background-color: $kbd-bg;
+  @include border-radius($border-radius-sm);
+  @include box-shadow($kbd-box-shadow);
+
+  kbd {
+    padding: 0;
+<<<<<<< HEAD
+    font-size: 100%;
+=======
+    @include font-size(100%);
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+    font-weight: $nested-kbd-font-weight;
+    @include box-shadow(none);
+  }
+}
+
+// Blocks of code
+pre {
+  display: block;
+<<<<<<< HEAD
+  font-size: $code-font-size;
+=======
+  @include font-size($code-font-size);
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+  color: $pre-color;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+<<<<<<< HEAD
+    font-size: inherit;
+=======
+    @include font-size(inherit);
+>>>>>>> 39983418aa7584500db446d54242f1da5bfe86ee
+    color: inherit;
+    word-break: normal;
+  }
+}
+
+// Enable scrollable blocks of code
+.pre-scrollable {
+  max-height: $pre-scrollable-max-height;
+  overflow-y: scroll;
+}
