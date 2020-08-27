@@ -16413,7 +16413,6 @@ function buildTable(dataArray, state) {
         var row = `<tr>
                   <td><a class="hover-underline" href="organisms/${html}.html"><center>${myList[i].org_name}</center></a></td>
                   <td><a href="CSV/${org}.csv"><center><img src="images/download-icon.png" height="25" width="25"></img></center></a></td>
-// 				  <td><a href="feature_matrices/${org} - feature matrix.csv"><center><img src="images/download-icon.png" height="25" width="25"></img></center></a></td>
                   <td><a class="hover-underline" href="organisms/${html}.html"><center>${myList[i].total_genes}</center></a></td>
                   </tr>`
         table.append(row)
