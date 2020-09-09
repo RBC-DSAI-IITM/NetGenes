@@ -5795,6 +5795,7 @@ th
   border: 1px solid black;
   background-color:#f7ca44;
   height: 100px;
+  /* table-layout: fixed; */
   
 }
 td{ 
