@@ -113,18 +113,24 @@
   <div class="container mb-5">
 	  <button class="accordion">What is NetGenes?</button>
 		<div class="panel"  style="margin-top:5px">
-		  <p>NetGenes is a web-database which contains essential genes for 2711 bacterial organisms predicted using protein-protein interaction networks. The features are extracted from the networks using Recursive Feature Extraction (ReFeX). Learn more about ReFeX <a href="https://dl.acm.org/doi/10.1145/2020408.2020512" target="_blank"> <u>in this paper</u>.</a></p>
+		  <p>NetGenes is a web-database which contains essential genes for 2711 bacterial organisms predicted using protein-protein interaction networks. These interaction networks are retrieved from <u><a href="http://string-db.org/" target="_blank">STRING-DB v11.0</a></u>.</p>
 		</div>
 
 		<button class="accordion">What are essential genes?</button>
 		<div class="panel">
-		  <p>Essential genes are indispensable genes for organisms to grow and reproduce offspring under certain environment. Deletion of such genes will either compromise organism viability or results in profound loss of fitness.</p>
+		  <p>Essential genes are indispensable genes for organisms to grow and reproduce offspring under certain environment. In general, deletion of such genes will either compromise organism viability or results in profound loss of fitness.</p>
+		  <p>Gene essentiality is challenging to predict since it encompasses a number of factors. Nevertheless, many studies have sought to predict essentiality using machine learning approaches. For this purpose, essentiality was defined as indispensability of a gene under rich media conditions. <u><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0208722" target="_blank">[ref]</a></u></p>
 		</div>
 
 		<button class="accordion">What are the bacterial organisms featured in NetGenes?</button>
 		<div class="panel">
 		  <p>We retrieved all the interactomes offered by STRING-DB v11.0 and separated the bacterial interactomes. The bacterial filter yielded 2711 organisms. The list of organisms and the number of predicted essential genes in each organism is given in the Species List file which can be downloaded from <u><a href="downloads.html">Downloads</a></u> page.</p>
 		</div>
+		
+		<button class="accordion">What are the features used in predicting the essential genes?</button>
+		<div class="panel">
+		  <p>Each gene is represented as a feature vector of size 283. 267 of those features comes from a graph mining method called Recursive Feature Extraction (ReFeX). Learn more about ReFeX <a href="https://dl.acm.org/doi/10.1145/2020408.2020512" target="_blank"> <u>in this paper</u>.</a> The rest of the 16 features are centrality features calculated for each node in the interactome. You can find the names of the features in Training Dataset file in <u><a href="downloads.html">Downloads</a></u> page. </p>
+		</div>		
 		
 	  <button class="accordion">What are the details can I get for an essential gene?</button>
 		<div class="panel">
@@ -140,6 +146,11 @@
 		<div class="panel">
 		  <p>We trained the model using 27 organisms used in our <u><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0208722" target="_blank">original paper</a></u> and trained it on the rest of the 2711 organisms. The training dataset used is given in the Training Dataset file. Feature matrices link provides you the feature matrices for all 2711 organisms which is used as test data.</p>
 		</div>	
+		
+		<button class="accordion">How do I cite NetGenes?</button>
+		<div class="panel">
+		  <p>Cite us at:  <b>Azhagesan, K., Ravindran, B., & Raman, K., (2018) Network-based features enable prediction of essential genes across diverse organisms. <i>PLOS ONE,</i> 13(12), e0208722.<a href="https://doi.org/10.1371/journal.pone.0208722" target="_blank">&nbsp;&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i><u>DOI</u></a></b></p>
+		</div>		
 
 		<h4 style="margin-top:40px">If you have any more questions/issues, feel free to reach us at our <u><a href="https://github.com/RamanLab/NetGenes/issues" target="_blank">GitHub repo</a></u>.</h4>
   </div>
