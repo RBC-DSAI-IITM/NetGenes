@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>NetGenes</title>
+	<meta name="description" content="NetGenes is a web-database which contains essential genes for 2711 bacterial organisms predicted using machine learning algorithms." />
+	<!-- <meta http-equiv="refresh" content="0; URL=https://www.bitdegree.org/" /> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="twitter:card" content="summary" />
+	<!-- <meta name="twitter:site" content="@flickr" /> -->
+	<meta name="twitter:title" content="NetGenes | Database for essential genes" />
+	<meta name="twitter:description" content="NetGenes is a database containing essential genes for 2711 bacterial species predicted using protein interactomes. NetGenes also provides functional annotations and essentiality scores along with gene IDS." />
+	<meta name="twitter:image" content="https://raw.githubusercontent.com/RamanLab/NetGenes/master/favicon_card.png" />
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176427774-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-176427774-1');
+	</script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <!-- <script src="js/jquery-csv-master/src/jquery.csv.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="favicon.PNG">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,500|Dosis:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+<body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+	
+      <a class="navbar-brand" href="index.html">NetGenes</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+		  <li class="nav-item"><a href="downloads.html" class="nav-link">Downloads</a></li>
+		  <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>			  
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div class="block-31" style="position: relative; background-image: url('images/bg_prime.jpg');">
+    <div class="owl-carousel loop-block-31 ">
+      <div class="block-30 block-30-sm item" style="background-image: url('images/bg_prime.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-7">
+              <h2 class="heading mb-2"><br>NetGenes</h2>
+			  <h2 style="color:#fff">Interaction Networks to Gene Essentiality</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="site-section section-counter">
+    <div class="container">
+      <div id="top" class="row">
+        <div class="col-md-6 pr-5">
+          <div class="block-48">
+              <span class="block-48-text-1">Predicted for over</span>
+              <div class="block-48-counter ftco-number">2700</div>
+              <!-- <h2 class="display-4 mb-3">20</h2> -->
+              <span class="block-48-text-1 mb-4 d-block">Organisms</span>
+              <!-- <p class="mb-0"><a href="#" class="btn btn-white px-3 py-2">View List of Organisms</a></p> -->
+            </div>
+        </div>
+        <div class="col-md-6 welcome-text">
+          <h2 class="display-4 mb-3">What is this?</h2>
+          <p class="lead">We predicted essential genes for 2711 bacterial organisms using network-based features. The genes classified as essential by our machine learning (ML) model are curated and published in this web database. </p>
+          <p class="mb-0"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0208722" target="_blank" class="btn btn-primary px-3 py-2">Original paper</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div class="site-section">
+		<div>
+			<div>
+			   <div class="row mb-3 justify-content-center">
+				<div class="col-md-8 text-center">
+					<h2>Search by Organism</h2>
+						<!-- <p class="lead">Start typing to get suggestions</p> -->
+				</div>
+			  </div>
+				<p align="center"><input id="myTextbox1" type="text" name="obj" placeholder="Start typing to get suggestions.." font-weight="bold" font-size="13px" background-color="blue" height="35px" width="503px"><br><br></p>
+			</div>
+			<table width="70%" align="center" id="our-table" style="table-layout:auto">
+				<thead>
+					<tr>
+						<th width="50%"><center><h4>Organism Name</h4></center></th>
+						<th><center><h4>Download list of <br>essential genes (CSV)</h4></center></th>
+						<th><center><h4># of essential genes</h4></center></th>
+					</tr>
+				</thead>
+				<tbody id="table-body">
+
+				</tbody>
+			</table>
+		
+		
+		<div class="row mb-3 justify-content-center">
+			<br>
+		</div>
+		<div class="row mb-3 justify-content-center">
+			<div id="pagination-wrapper"></div>
+		</div>
+		</div>
+	</div>
+	
+	<!-- END .site-section -->
+
+	
+ 	<footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="lead">We are an interdisciplinary group dedicated to pioneering innovative approaches and algorithms that integrate multi-dimensional data across scales, to understand, predict and manipulate complex biological systems.</p>
+          <!-- <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
+        </div>
+        <div class="col-md-6 col-lg-4">
+		  <div class="row mt-4">
+			<div class="col-md-12 mb-2 text-center mt-3">
+				<h1 class="heading-section">Organisations</h1>
+				</div>
+				<div class="col-md-6 col-lg-6">
+				  <div class="block-38 text-center">
+					<div class="block-38-img">
+					  <div class="block-38-header">
+						<a href="https://ibse.iitm.ac.in/" target="_blank">
+						<img src="images/ibse.PNG" alt="Image placeholder">
+						</a>
+						<!-- <h2 class="block-38-heading">IBSE</h2> -->
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-6 col-lg-6">
+				  <div class="block-38 text-center">
+					<div class="block-38-img">
+					  <div class="block-38-header">
+						<a href="https://rbcdsai.iitm.ac.in/" target="_blank">
+						<img src="images/rbcdsai.png" alt="Image placeholder">
+						</a>
+						<!-- <h1 class="block-38-heading">RBCDSAI</h1> -->
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="block-23">
+            <h3 class="heading-section">Get Connected</h3>
+              <ul>
+                <li><span class="icon icon-location-arrow"></span><p style="text-align:left">5th Floor, Block-II, Bhupat and Jyoti Mehta School of Biosciences,
+																						Indian Institute of Technology Madras,
+																						Chennai - 600 036, INDIA</p></li>
+                <li><span class="icon icon-envelope"></span><span class="text">kraman@iitm.ac.in <br>ravi@cse.iitm.ac.in</span></li>
+				<li><span class="icon icon-globe"></span><p style="text-align:left"><a href="https://home.iitm.ac.in/kraman/lab/" target="_blank">https://home.iitm.ac.in/kraman/lab/</a>
+																	<br><a href="https://www.cse.iitm.ac.in/~ravi/" target="_blank">https://www.cse.iitm.ac.in/~ravi/</a>
+																	</p></li>
+              </ul>
+            </div>
+        </div>
+        
+        
+      </div>
+      <div class="row pt-5">
+        <div class="col-md-12 text-center">
+          
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/aos.js"></script>
+
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="js/myscripts.js"></script>
+	
+</body>
+
+</html>
